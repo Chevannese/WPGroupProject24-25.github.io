@@ -1,0 +1,46 @@
+<!--Craig Williamson -2301516 - UM1 - Wednesday 8AM - 10AM -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="../SRC/style.css">
+    <link rel="icon" href="../Assests/zlogo.webp" type="image">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navtop">
+            <div class="navItem">
+                <h1>Gucci Glasses</h1>
+            </div>
+            <a href="index.html"> 
+                <button class="loginprompt" type="button" id="loginButton">Log Out</button>
+            </a>
+        </div>
+        <div class="navbase">
+            <a class="menuitem" href="copyindex.html">Home</a>
+            <a class="menuitem" href="stock.html">Cook Books</a>
+            <a class="menuitem" href="cart.html">Cart</a>
+        </div>
+    </nav>
+    
+
+    <div class="cart-container" id="products-grid"
+    style="display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 30px;
+            column-gap: 20px;
+            row-gap: 40px;
+            background-color: white;">
+
+        <div id="label" class="label" style="height:500px; text-align: center;"></div>
+        <div id="shopping-cart" style="height:500px; text-align: center;" class="shopping-cart"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
