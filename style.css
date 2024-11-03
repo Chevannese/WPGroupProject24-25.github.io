@@ -219,3 +219,23 @@ input[type="password"] {
     align-items: center;
     height: 110px;
 }
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    height: 279px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.bi-dash-lg{
+    color: red;
+}
+
+.bi-plus-lg{
+    color: rgb(2, 182, 2);
+}
