@@ -212,3 +212,10 @@ input[type="password"] {
 .item{
     height: 500px;text-align: center;
 }
+.price-quantity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+}
