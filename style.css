@@ -199,3 +199,16 @@ input[type="password"] {
     text-align: center;
     width: 300px;
 }
+
+.shop{
+    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 30px;
+                    column-gap: 20px;
+                    row-gap: 40px;
+                    background-color: white;
+}
+
+.item{
+    height: 500px;text-align: center;
+}
