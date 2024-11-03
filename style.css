@@ -1,0 +1,201 @@
+.nav-style
+{
+    font-size:50px;
+}
+
+.bgColour
+{
+    background-color: #E3E3E3;
+}
+
+
+
+#Checkout,#Cancel,#Exit
+{
+    background-color: black;
+    color:white;
+    border-radius: 14px;
+    width: 70px;
+    height: 30px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+
+.container
+{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.box
+{
+    width:200px;
+    height: 230px;
+    
+}
+#box1
+{
+    
+    flex:2;
+}
+
+#box2
+{
+    
+    flex:2;
+    color:blue;
+    font-size:20px;
+}
+
+#box3
+{
+    flex:1;
+    color:blue;
+}
+
+
+
+.text-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .bottom-left {
+    position: absolute;
+    bottom: 150px;
+    left: 40%;
+  }
+
+.index-button
+{
+    border:solid;
+    border-color:white;
+    color:white;
+    width:200px;
+    height:40px;
+    font-size: large;
+    background-color: transparent;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background-color 1s, color 1s;
+}
+
+.index-button:hover
+{
+    background-color:white;
+    color:#00EAB2;;
+}
+
+
+.iconSize
+{
+    font-size: 30px;
+}
+
+#loginButton
+{
+    background-color: black;
+    color:white;
+    border-color:black;
+    border-radius: 14px;
+    width:150px;
+    height:50x;
+    font-size: large;
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    height:300px;
+    background-image:linear-gradient(to right, #00EAB2,#90EE91);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.addItem
+{
+    width:75%;
+    height:30px;
+    border-radius: 14px;
+    background-color: #fbc534;
+    color:black;
+    border:thin;
+    border-color:#fbc534;
+    cursor:pointer;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+}
+.addItem:hover
+{
+    background-color: #FF9900;
+}
+
+.pagination
+{
+    text-align: center;
+    font-size: 25px;
+    background-color:#00EAB2;
+ 
+}
+.pagination a
+{
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+
+.pagination a
+{
+    color:white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active
+{
+    background-color: #800020;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.active)
+{
+    background-color: rgb(199, 32, 32);
+    border-radius: 5px;
+}
+
+.gallery
+{
+    display: inline-block;
+    border: 1px solid;
+    margin:5px;
+}
+.gallery .description
+{
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+}

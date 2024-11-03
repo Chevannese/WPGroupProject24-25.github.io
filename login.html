@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+</head>
+
+<style>
+    *
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+<body class="bgColour">
+    <main>
+        <div class="container" id="container">
+            <div class="box" id="box1">
+                <img src="..\Assets\logo.png" width="300px" height="100%">
+            </div>
+
+            <div class="box" id="box2">
+                <br>
+                
+                <span class="iconSize"><i class="fa-regular fa-envelope"></i></span> <a href="mailto:chevannesemellis@students.utech.edu.jm?subject=Gucci Glasses Eyecare Store Inquiry">chevannesemellis@students.utech.edu.jm</a>
+                <br>
+                <br>
+                <span class="iconSize"><i class="fa-solid fa-phone"></i></span> (876)-840-3526
+            </div>
+            <div class="box bg-primary-x-light" id="box3">
+                <br>
+                <span class="iconSize"><i class="fa-solid fa-user" style="color: #74C0FC;"></i></span> Login
+            </div>
+        </div>
+
+
+        <div class="pagination">
+            <header>
+              <a href="index.html">  Home </a>
+              <a href="about-us.html">  About Us </a>
+              <a href="login.html">Products/Services</a>
+            </header>
+        </div>
+       <br><br>
+        <center>
+        <form id="loginForm";">
+            
+            <div style="font-size: 30px;"><legend>Login Here</legend></div>
+            <div>
+            <div><label for="username">Username</label></div>
+            <input type="text" name="username" id="username" required>
+            </div>
+
+            <div>
+            <div><label for="password">Password</label></div>
+            <input type="password" name="password" id="password" minlength="8" required>
+            </div>
+
+            <div>
+            <button id="loginButton" type="submit" id="Login">Login</button>
+            </div>
+        </form></center>
+        <br><br>
+    
+
+
+
+
+    </main>
+    <script src="login.js">
+       
+    </script>
+</body>
+
+
+<div class="pagination">
+    <footer>
+      <a href="index.html">  Home </a>
+      <a href="about-us.html">  About Us </a>
+      <a href="login.html">Products/Services</a>
+    </footer>
+</div>
+
+
+
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Products/Services</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+        <script src="cart.js" async></script>
+    </head>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        h1,h2
+        {
+            text-align: center;
+        }
+        
+    </style>
+    <body class="bgColour">
+        <main>
+            <div class="container" id="container">
+                <div class="box" id="box1">
+                    <img src="..\Assets\logo.png" width="300px" height="100%">
+                </div>
+
+                <div class="box" id="box2">
+                    <br>
+                    
+                    <span class="iconSize"><i class="fa-regular fa-envelope"></i></span> <a href="mailto:chevannesemellis@students.utech.edu.jm?subject=Gucci Glasses Eyecare Store Inquiry">chevannesemellis@students.utech.edu.jm</a>
+                    <br>
+                    <br>
+                    <span class="iconSize"><i class="fa-solid fa-phone"></i></span> (876)-840-3526
+                </div>
+                <div class="box bg-primary-x-light" id="box3">
+                    <br>
+                    <span class="iconSize"><i class="fa-solid fa-user" style="color: #74C0FC;"></i></span> <span id="Login">Login</span>
+                    <br><br><i id = "cart" class="fa-solid fa-cart-shopping" style="color: #FFD43B;"><button id = "Checkout">Checkout</button></i>
+                    <div><button id="Cancel">Cancel</button></div>
+                    <div><button class="Exit" id="Exit">Exit</button></div>
+                </div>
+            </div>
+
+
+            <div class="pagination">
+                <header>
+                  <a href="index.html">  Home </a>
+                  <a href="about-us.html">  About Us </a>
+                  <a href="login.html">Products/Services</a>
+                </header>
+            </div>
+
+
+            <div class="cartItems"
+            id="products-grid"
+            style="display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 30px;
+                    column-gap: 20px;
+                    row-gap: 40px;
+                    background-color: white;">
+
+
+            <!--Item 1-->
+            <div class="cartItem"  style="height:500px; text-align: center;">
+                <div>
+                    <img class="image" src="https://image4.cdnsbg.com/2/10/419867_1599515255854.jpg" width="100%" height="50%" alt="GG01840">
+                </div><br>
+                <span><h4>Gucci</h4></span><BR>
+                <span class="title"><p>GG01840</p></span><BR>
+                <span class="price"><H3>$24000</H3></span>
+                <p>The Gucci Unisex Eyewear, manufactured by Kering Eyewear in 2018, is a timeless and versatile accessory that combines sophistication with practicality. Featuring a black full-rim square frame, this pair of glasses is made from durable acetate, offering a sleek and classic design that suits both oval and round face shapes. The clear lenses are customizable, allowing wearers to adapt them to their specific needs while maintaining a polished appearance. </p>
+                <br>
+                <button class="addItem" id = "addItem1"">Add to Cart</button>
+            </div>
+
+
+            <!-- Item 2-->
+            <div class="cartItem" style="height: 500px;text-align: center;">
+
+                <div>
+                    <img class="image" src="https://image4.cdnsbg.com/2/10/610525_1688966471608.jpg" width="100%" height="50%" alt="GG12220">
+                </div><BR>
+                    <span><h4>Gucci</h4></span><BR>
+                    <span class="title"><P>GG12220</P></span><BR>
+                        <span class="price"><H3>$47000</H3></span>
+                        <p>With Gucci GG1222O glasses, vision correction is no longer an ugly essential item, but a fashion forward accessory that will enhance your style and bring a look together. Finely constructed from Metal , the Gold coloured frames will look great for any occasion. Easily add RX prescription lenses that are custom-made for you to your order for unbeatable prices.</p>
+                        <br><br><br>
+                        <button class="addItem" id = "addItem2">Add to Cart</button>
+            </div>
+
+
+
+            <!-- Item 3-->
+            <div class="cartItem" style="text-align: center; height:500px">
+
+            <div>
+                <img class="image" src="https://image4.cdnsbg.com/2/10/573503_1660662396934.jpg" width="100%" height="50%" alt="GG10850">
+            </div><br>
+            <span><h4>Gucci</h4></span><BR>
+                <span class="title"><P>GG10850</P></span><BR>
+                    <span class="price"><H3>$41000</H3></span>
+                    <p>The classic Gucci GG1085O are a fantastic choice for glasses. With a range of frame shapes which are finely crafted from Acetate , colours Shiny Transparent Azure and lens Customisable they are suitable for any wearer. At SmartBuyGlasses , we offer special deals on premium prescription lenses to go with your Shiny Transparent Azure frames.</p>
+                    <br><br>
+                    <button class="addItem" id="addItem3">Add to Cart</button>
+
+            </div>
+
+
+            <!--Item 4-->
+            <div class="cartItem" style="text-align: center;height:500px">
+
+                <div><img class="image" src="https://image4.cdnsbg.com/2/10/626754_1694180735440.jpg" width="100%" height="50%" alt="GG13180">   </div>
+            <span><h4>Gucci</h4></span><BR>
+                <span class="title"><P>GG13180</P></span><BR>
+                    <span class="price"><H3>$34000</H3></span>
+                    <p>The Gucci Women's Eyewear from 2023, manufactured by Kering Eyewear, is a stylish and eco-conscious choice for modern fashion lovers. 
+                        The square frame shape complements oval and round face shapes, offering a bold yet elegant look. 
+                    </p><br><br><br><br>
+                    <button class="addItem" id="addItem4">Add to Cart</button>
+
+            </div>
+
+
+
+
+            <!-- Item 5-->
+            <div class="cartItem" style="text-align: center; height:500px">
+                <div><img class="image" src="https://image4.cdnsbg.com/2/10/626760_1693562907628.jpg" width="100%" height="50%" alt="GG13200">  </div>
+                <div><h4>Gucci</h4></div><BR>
+                    <div class="title"><P>GG13200</P></div><BR>
+                        <span class="price"><H3>$34000</H3></span>
+                        <p>Gucci ’s GG1320O appear with a dynamic Eco-Acetate eyeglass frame. The SmartBuyGlasses prescription lenses option is a perfect alternative for when your eyeglasses happen to arrive on your doorstep, ready to try on. Most of our lenses are coated with a unique and advanced coating, which provides them with an anti-glare and scratch resistant cover. This product features Tortoise frame and standard lenses.</p>
+                        <br>
+                        <button class="addItem" id="addItem5">Add to Cart</button>
+            
+            </div>
+
+
+            <!-- Item 6 -->
+            <div class="cartItem" style="text-align: center; height:500px">
+                <div><img class="image" src="https://image4.cdnsbg.com/2/10/657438_1700573529023.jpg" width="100%" height="50%" alt="GG1474OJ Asian Fit"> </div>
+                <span><h4>Gucci</h4></span><BR>
+                    <span class="title"><P>GG1474OJ Asian Fit</P></span><BR>
+                        <span class="price"><h3>$34000</h3></span>
+                        <p>The classic Gucci Gucci GG1474OJ Asian Fit are a fantastic choice for glasses. With a range of frame shapes which are finely crafted from Acetate , colours Tortoise and lens Customisable they are suitable for any wearer. </p>
+                        <br><br><br><br>
+                        <button id="addItem6" class="addItem">Add to Cart</button>
+
+            </div>
+
+            <!--Item 7 -->
+            <div class="cartItem" style="text-align: center;height:500px">
+                <div> <img class="image" src="https://image4.cdnsbg.com/2/10/573400_1676538104637.jpg" width="100%" height="50%" alt="GG0737O"> </div>
+                <div><h4>Gucci</h4></div><BR>
+                    <span class="title"><P>GG0737O</P></span><BR>
+                        <span class="price"><H3>$34000</H3></span>
+                        <p>The Gucci Men's Eyewear, manufactured by Kering Eyewear in 2021, presents a modern and sleek design with its shiny transparent grey full-rim square frame. Made from durable acetate, the frame offers both style and longevity, while the bold square shape is particularly suited for oval and round face shapes, creating a sharp and defined look.</p>
+                        <br>
+                        <button class="addItem" id="addItem7">Add to Cart</button>
+            
+            </div>
+
+            <!-- Item 8 -->
+            <div class="cartItem" style="text-align: center;height:500px">
+                <div> <img class="image" src="https://image4.cdnsbg.com/2/10/653787_1705232982434.jpg" width="100%" height="50%" alt="GG0737O">  </div>
+                <div><h4>Gucci</h4></div><BR>
+                    <span class="title"><P>GG0737O</P></span><BR>
+                        <span class="price"><H3>$39000</H3></span>
+                        <p>This season, the Gucci GG0737O glasses are a fashionable favourite from the Gucci eyeglasses collection. For optimal clarity in vision, we offer professional prescription RX lens to match your Transparent Green frames made from Acetate.</p>
+                        <br><br><br>
+                        <button class="addItem" id="addItem8">Add to Cart</button>
+            </div>
+
+
+
+            <!-- Item 9-->
+            <div class="cartItem" style="text-align: center;height:400px">
+                <div> <img class="image" src="https://image4.cdnsbg.com/2/10/599462_1660850881977.jpg" width="100%" height="50%" ALT="GG1150O">  </div>
+                <div><h4>Gucci</h4></div><BR>
+                    <span class="title"><P>GG1150O</P></span><BR>
+                    <span class="price"><H3>$40000</H3></span>
+                    <p>Try on the GG1150O eyeglasses without going to the store with our Virtual 3D Try On system that lets you digitally try on our collection of eyewear. Expertly crafted from Customisable , the eyeglasses in Gold compliments a range of different facial shapes and can match many outfits. </p>
+                        <br><br><button class="addItem" id="addItem9">Add to Cart</button>
+            
+            </div>
+
+
+        </div>
+        <div style="background-color: white;">
+        <h1>Your Current Cart</h1><br>
+        <h2>Quantity: <span class="QTY"></span></h2><br>
+        <h2>Total: <span class="totalPrice"></span></h2>
+        <br>
+        <br></div>
+        </main>
+    </body>
+    
+    
+    <div class="pagination">
+        <footer>
+          <a href="index.html">  Home </a>
+          <a href="about-us.html">  About Us </a>
+          <a href="login.html">Products/Services</a>
+        </footer>
+    </div>
+</html>
