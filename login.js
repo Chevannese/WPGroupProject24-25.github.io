@@ -41,7 +41,7 @@ sampleUser =
             else if (username === "Kurumi" && password === "Shido123")
             {
                 alert("Login successful!");
-                window.location.href = "product.html";
+                window.location.href = "welcome.html";
                 localStorage.setItem('User', JSON.stringify([username, password]));
             }
             else 
