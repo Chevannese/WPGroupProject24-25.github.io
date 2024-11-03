@@ -1,112 +1,121 @@
+let label = document.getElementById("label");
+let ShoppingCart = document.getElementById("shopping-cart");
 
-const data = JSON.parse(localStorage.getItem('User'));
-const result = data[0];
-document.getElementById('Login').textContent = result;
-let cartTitle = [];
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-var total = 0;
-var quantity = 0
-// Check if the document is still loading, and attach the 'ready' event if needed
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready);
-} else {
-    ready();
-}
+let generateCartItems = () => {
+    if (basket.length !== 0) {
+        ShoppingCart.innerHTML = basket.map((x) => {
+            let{id, item} = x;
+            let search = shopItemsdata.find((y) => y.id === id) || []
+            return `<div class="cart-item">
+                        <img  src=${search.img} alt="" width="100%":>
+                        <div class=details>
+                            <div class="title-price-x">
+                            <h4 class=title-price>
+                                <p>${search.name}</p>
+                                <p class="cart-item-price">$${search.price}</p>
+                            </h4>
+                            <i onclick="removeItem(${id})" class="bi-x-lg"></i>
+                            </div>
 
-function ready() {
-    // Get all buttons with class 'addItem'
-    var addToCartButtons = document.getElementsByClassName('addItem');
-    
-    // Loop through the buttons and add an event listener to each
-    for (var i = 0; i < addToCartButtons.length; i++) {
-        var button = addToCartButtons[i];
-        button.addEventListener('click', addToCartClicked);
+                            <div class="buttons">
+                                <i onclick="decrement(${id})" class="bi-dash-lg"></i>
+                                <div id=${id} class="quantity">${item}</div>
+                                <i onclick="increment(${id})" class="bi-plus-lg"></i>
+                                <h3>$ ${item*search.price}</h3>
+                            </div>
+                        </div>    
+                    </div>`;
+        }).join('');
+        label.innerHTML = `<h2>Your Shopping Cart</h2>`;
+    } else {
+        ShoppingCart.innerHTML = ``;
+        label.innerHTML = `
+        <h2>Cart is empty</h2>
+        <a href="copyindex.html">
+        <button class="HomeBtn">Back to Home</button>
+        </a>
+        `;
+    }
+};
+
+generateCartItems();
+
+let increment = (id) => {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem.id);
+  
+    if (search === undefined) {
+      basket.push({
+        id: selectedItem.id,
+        item: 1,
+      });
+    } else {
+      search.item += 1;
     }
     
-    document.getElementById("Checkout").addEventListener("click", function () {
-        var confirmCheckout = confirm("Are you sure you want to checkout?");
-        if (confirmCheckout) {
+    generateCartItems();
+    update(selectedItem.id);
+    localStorage.setItem("data", JSON.stringify(basket));
+  };
 
-            localStorage.setItem('totQty', JSON.stringify([total, quantity]));
-            window.location.href = "invoice.html";
-        }
-    })
-
-    //Once clicked confirms to cancel order
-    document.getElementById("Cancel").addEventListener("click", function () {
-        var confirmCancel = confirm("Are you sure you want to cancel your order?");
-        if (confirmCancel) {
-            total = 0;
-            quantity = 0;
-            document.getElementsByClassName('totalPrice')[0].innerHTML = '$' + total;
-            document.getElementsByClassName('QTY')[0].innerHTML = quantity;
-            console.log(total, quantity);
-            
-            cartTitle = [];
-            console.log(cartTitle);
-
-        }
-    })
-
-    //Once clicked confirms to exit product page
-    document.getElementById("Exit").addEventListener("click", function () {
-        var confirmExit = confirm("Are you sure you want to exit?");
-        if (confirmExit) {
-            window.location.href = "login.html";
-        }
-    });
-
-    
-    
-}
-
-
-
-function addToCartClicked(event) {
-    var button = event.target;
-    
-    // Assuming the HTML structure is such that we can access the shop item with this method
-    var shopItem = button.parentElement; // Using closest to find the nearest parent with class 'shop-item'
-
-    // Get the title and price of the product from the item
-    var title = shopItem.getElementsByClassName('title')[0].innerText;
-    var priceElement = shopItem.getElementsByClassName('price')[0].innerText;
-    var image = shopItem.getElementsByClassName('image')[0].src;
-    cartTitle.push(title);
-    console.log(cartTitle);
-
-    localStorage.setItem('cartObj', JSON.stringify(cartTitle));
-    console.log(title, priceElement, image);
-
-    
-
-    // Remove the dollar sign and convert the price to a float
-    var price = parseFloat(priceElement.replace('$', ''));
-
-    total = total + price;
-    quantity++;
-    document.getElementsByClassName('totalPrice')[0].innerHTML = '$' + total;
-    document.getElementsByClassName('QTY')[0].innerHTML = quantity;
-    console.log(total,quantity);
-}
-
-
-
-
-function updateCartTotal()
-{
-    var AllPrice = document.getElementsByClassName('price');
-
-    var cartRows = document.getElementsByClassName('cartRow');
-    var total = 0;
-    // Works up to the above info
-    // Loop through each cart row and calculate the total price
-    for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('price')[0].innerText;
-        var price = parseFloat(priceElement.innerText.replace('$', ''));
-        total += price;
-        console.log(total);
+  let decrement = (id) => {
+    let selectedItem = id;
+    let search = basket.find((x) => x.id === selectedItem.id);
+  
+    if (search === undefined) return;
+    else if (search.item === 0) return;
+    else {
+      search.item -= 1;
     }
-    document.getElementsByClassName('totalPrice')[0].innerHTML = '$' + total;
-}
+  
+    update(selectedItem.id);
+    basket = basket.filter((x) => x.item !== 0);
+    generateCartItems();
+    localStorage.setItem("data", JSON.stringify(basket));
+  };
+
+  let update = (id) => {
+    let search = basket.find((x) => x.id === id);
+    if (search) {
+      document.getElementById(id).innerHTML = search.item;
+    } else {
+      document.getElementById(id).innerHTML = 0;
+    }
+    totalAmount();
+  };
+
+  let removeItem = (id) => {
+    let selectedItem = id
+    //console.log(selectedItem.id)
+    basket = basket.filter ((x) => x.id !== selectedItem.id);
+    generateCartItems();
+    totalAmount();
+    localStorage.setItem("data", JSON.stringify(basket));
+  }
+
+  let totalAmount =() => {
+    if (basket.length !== 0){
+        let amount = basket.map((x) => {
+          let { item, id} = x;
+          let search = shopItemsdata.find((y) => y.id === id) || []
+          return item *  search.price
+
+        }).reduce((x,y) => x+y,0)
+        label.innerHTML = `
+        <h2> Total Bill : $ ${amount}
+        <button class="checkout">Checkout</button>
+        <button onclick="clearCart()"class="removeAll">Clear Cart</button>`
+        
+        //console.log(amount)
+    } else return;
+  }
+
+  totalAmount();
+
+  let clearCart = () => {
+    basket = [];
+    generateCartItems();
+    localStorage.setItem("data", JSON.stringify(basket));
+  };
