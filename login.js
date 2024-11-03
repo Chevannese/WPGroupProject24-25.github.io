@@ -18,30 +18,30 @@ sampleUser =
             if (username === "Tommy" && password === "easypass")
             {
                 alert("Login successful!");
-                window.location.href = "welcome.html";
+                window.location.href = "product.html";
                 localStorage.setItem('User', JSON.stringify([username, password]));
             }
             else if (username === "Chise" && password === "peaceofmind") {
                 alert("Login successful!");
-                window.location.href = "welcome.html";
+                window.location.href = "product.html";
                 localStorage.setItem('User', JSON.stringify([username, password]));
             }
             else if (username === "Jonathan" && password === "rustLinux")
             {
                 alert("Login successful!");
-                window.location.href = "welcome.html";
+                window.location.href = "product.html";
                 localStorage.setItem('User', JSON.stringify([username, password]));
             }
             else if (username === "Christeen" && password === "onepunch876")
                 {
                     alert("Login successful!");
-                    window.location.href = "welcome.html";
+                    window.location.href = "product.html";
                     localStorage.setItem('User', JSON.stringify([username, password]));
                 }
             else if (username === "Kurumi" && password === "Shido123")
             {
                 alert("Login successful!");
-                window.location.href = "welcome.html";
+                window.location.href = "product.html";
                 localStorage.setItem('User', JSON.stringify([username, password]));
             }
             else 
