@@ -57,7 +57,7 @@ let increment = (id) => {
     
     generateCartItems();
     update(selectedItem.id);
-    localStorage.setItem("data", JSON.stringify(basket));
+    localStorage.setItem("AllProducts", JSON.stringify(basket));
   };
 
   let decrement = (id) => {
@@ -73,7 +73,7 @@ let increment = (id) => {
     update(selectedItem.id);
     basket = basket.filter((x) => x.item !== 0);
     generateCartItems();
-    localStorage.setItem("data", JSON.stringify(basket));
+    localStorage.setItem("AllProducts", JSON.stringify(basket));
   };
 
   let update = (id) => {
@@ -117,5 +117,5 @@ let increment = (id) => {
   let clearCart = () => {
     basket = [];
     generateCartItems();
-    localStorage.setItem("data", JSON.stringify(basket));
+    localStorage.setItem("AllProducts", JSON.stringify(basket));
   };
