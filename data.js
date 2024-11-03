@@ -1,7 +1,7 @@
 let shopItemsdata = [{
     id:"product1",
     name:"GG01840",
-    price:2400,
+    price:24000,
     desc: "The Gucci Unisex Eyewear, manufactured by Kering Eyewear in 2018, is a timeless and versatile accessory that combines sophistication with practicality. Featuring a black full-rim square frame, this pair of glasses is made from durable acetate, offering a sleek and classic design that suits both oval and round face shapes. The clear lenses are customizable, allowing wearers to adapt them to their specific needs while maintaining a polished appearance..",
     img:'https://image4.cdnsbg.com/2/10/419867_1599515255854.jpg'
 },
