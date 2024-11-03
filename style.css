@@ -239,3 +239,8 @@ input[type="password"] {
 .bi-plus-lg{
     color: rgb(2, 182, 2);
 }
+
+.bi-x-lg{
+    color: red;
+    font-weight: bold;
+}
