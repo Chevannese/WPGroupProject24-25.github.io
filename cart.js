@@ -1,7 +1,7 @@
 let label = document.getElementById("label");
 let ShoppingCart = document.getElementById("shopping-cart");
 
-let basket = JSON.parse(localStorage.getItem("data")) || [];
+let basket = JSON.parse(localStorage.getItem("AllProducts")) || [];
 
 let generateCartItems = () => {
     if (basket.length !== 0) {
@@ -92,7 +92,7 @@ let increment = (id) => {
     basket = basket.filter ((x) => x.id !== selectedItem.id);
     generateCartItems();
     totalAmount();
-    localStorage.setItem("data", JSON.stringify(basket));
+    localStorage.setItem("AllProducts", JSON.stringify(basket));
   }
 
   let totalAmount =() => {
