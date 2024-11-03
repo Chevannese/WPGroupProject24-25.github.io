@@ -1,6 +1,6 @@
 let shop = document.getElementById("shop");
 
-let basket = JSON.parse(localStorage.getItem("data")) || [];
+let basket = JSON.parse(localStorage.getItem("AllProducts")) || [];
 
 let generateShop = () => {
     return (shop.innerHTML=shopItemsdata
