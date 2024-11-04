@@ -1,31 +1,59 @@
-<!--Craig Williamson -2301516 - UM1 - Wednesday 8AM - 10AM -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="../SRC/style.css">
-    <link rel="icon" href="../Assests/zlogo.webp" type="image">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Cart</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/jpg" href="favicon.jpg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="data.js" async></script>
+        <script src="cart.js" async></script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="navtop">
-            <div class="navItem">
-                <h1>Gucci Glasses</h1>
+<style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        h1,h2
+        {
+            text-align: center;
+        }
+        
+    </style>
+    <body class="bgColour">
+        <main>
+            <div class="container" id="container">
+                <div class="box" id="box1">
+                    <img src="logo.png" width="300px" height="100%">
+                </div>
+
+                <div class="box" id="box2">
+                    <br>
+                    
+                    <span class="iconSize"><i class="fa-regular fa-envelope"></i></span> <a href="mailto:chevannesemellis@students.utech.edu.jm?subject=Gucci Glasses Eyecare Store Inquiry">chevannesemellis@students.utech.edu.jm</a>
+                    <br>
+                    <br>
+                    <span class="iconSize"><i class="fa-solid fa-phone"></i></span> (876)-840-3526
+                </div>
+                <div class="box bg-primary-x-light" id="box3">
+                    <br>
+                    <span class="iconSize"><i class="fa-solid fa-user" style="color: #74C0FC;"></i></span> <span id="Login">Login</span>
+                    <br><br><i id = "cart" class="fa-solid fa-cart-shopping" style="color: #FFD43B;"><button id = "Checkout">Checkout</button></i>
+                    <div><button id="Cancel">Cancel</button></div>
+                    <div><button class="Exit" id="Exit">Exit</button></div>
+                </div>
             </div>
-            <a href="index.html"> 
-                <button class="loginprompt" type="button" id="loginButton">Log Out</button>
-            </a>
-        </div>
-        <div class="navbase">
-            <a class="menuitem" href="copyindex.html">Home</a>
-            <a class="menuitem" href="stock.html">Cook Books</a>
-            <a class="menuitem" href="cart.html">Cart</a>
-        </div>
-    </nav>
+
+
+            <div class="pagination">
+                <header>
+                  <a href="product.html">  Product/Services </a>
+                    <a href="cart.html"> Cart </a>
+                  <a href="Dashboard">Dashboard</a>
+                </header>
+            </div>
+<body>
     
 
     <div class="cart-container" id="products-grid"
@@ -39,8 +67,15 @@
         <div id="label" class="label" style="height:500px; text-align: center;"></div>
         <div id="shopping-cart" style="height:500px; text-align: center;" class="shopping-cart"></div>
     </div>
+    
+<div class="pagination">
+        <footer>
+          <a href="product.html">  Product/Services </a>
+        <a href="cart.html"> Cart </a>
+          <a href="dashboard.html">Dashboard</a>
+        </footer>
+    </div>
 
-    <script src="data.js"></script>
-    <script src="cart.js"></script>
+    
 </body>
 </html>
