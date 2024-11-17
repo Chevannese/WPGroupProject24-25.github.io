@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head><title>Checkout</title>
+    <link rel="stylesheet" href="..\CSS\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+    <script src="..\JS\dashboard.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    *
+    {
+        margin:0px;
+        padding:0px;
+    }
+    h1,h2
+    {
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <main>
+        <div class="container" id="container">
+            <div class="box" id="box1">
+                <img src="..\Assets\logo.png" width="300px" height="100%">
+            </div>
+
+            <div class="box" id="box2">
+                
+            </div>
+            <div class="box bg-primary-x-light" id="box3">
+                <br>
+                <span class="iconSize"><i class="fa-solid fa-user" style="color: #74C0FC;"></i></span> <span class="Login">Login</span>
+                <br><br><i id = "cart" class="fa-solid fa-cart-shopping" style="color: #FFD43B;"></i>
+            </div>
+        </div>
+
+
+        <div class="pagination">
+            <header>
+              <a href="product.html">Products/Services</a>
+              <a href="cart.html">Cart</a>
+              <a href="dashboard.html">Dashboard</a>
+            </header>
+        </div>
+
+        <div class="container">
+            <!-- Left Side: Chart for User Frequency -->
+            <div class="left">
+                <h2>User Frequency Chart</h2>
+                <canvas id="userFrequencyChart"></canvas>
+            </div>
+    
+            <!-- Right Side: TRN Search and Invoice Table -->
+            <div class="right">
+                <h2>Search Invoices</h2>
+                <input type="text" id="searchTrn" placeholder="Search by TRN" class="search-bar" oninput="ShowInvoices()">
+                <button id="searchButton" onclick="ShowInvoices()">Search </button>
+                <div id="invoiceList"></div>
+            </div>
+        </div>
+
+
+</main>
+</body>
+
+<div class="pagination">
+    <footer>
+        <a href="product.html">Products/Services</a>
+        <a href="cart.html">Cart</a>
+        <a href="dashboard.html">Dashboard</a>
+    </footer>
+</div>
+</html>

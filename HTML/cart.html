@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head><title>Cart</title>
+    <link rel="stylesheet" href="..\CSS\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+    <script src="..\JS\cart.js" async></script>
+</head>
+<style>
+    *
+    {
+        margin:0px;
+        padding:0px;
+    }
+    h1,h2
+    {
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <main>
+        <div class="container" id="container">
+            <div class="box" id="box1">
+                <img src="..\Assets\logo.png" width="300px" height="100%">
+            </div>
+
+            <div class="box" id="box2">
+                
+            </div>
+            <div class="box bg-primary-x-light" id="box3">
+                <br>
+                <span class="iconSize"><i class="fa-solid fa-user" style="color: #74C0FC;"></i></span> <span class="Login">Login</span>
+                <br><br><i id = "cart" class="fa-solid fa-cart-shopping" style="color: #FFD43B;"></i>
+            </div>
+        </div>
+
+
+        <div class="pagination">
+            <header>
+              <a href="product.html">Products/Services</a>
+              <a href="cart.html">Cart</a>
+              <a href="dashboard.html">Dashboard</a>
+            </header>
+        </div>
+
+<section class="container content-section" style="background-color: white;">
+    <h2 class="section-header">CART</h2>
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Sub-Total</strong>
+        <span class="cart-total-price">$0</span>
+        
+        <h2 class="cart-total-title">GCT 15%</h2>
+        <span class="cart-gct-price">$0</span>
+
+        <h2 class="cart-total-title">Discount 30%</h2>
+        <span class="cart-discount-price">$0</span>
+        
+        <h2 class="cart-total-title">Grand Total</h2>
+        <span class="cart-grand-price">$0</span>
+    </div>
+    <div id = "cart-buttons">
+
+        <div class="cart-option"><button class="btn btn-primary btn-checkout" type="button">CHECKOUT</button></div>
+        <div class="cart-option"><button class="btn btn-primary btn-cancel" type="button">CANCEL</button></div>
+        <div class="cart-option"><button class="btn btn-primary btn-exit" type="button">EXIT</button></div>
+    </div>
+</section>
+
+<div class="pagination">
+    <footer>
+        <a href="product.html">Products/Services</a>
+        <a href="cart.html">Cart</a>
+        <a href="dashboard.html">Dashboard</a>
+    </footer>
+</div>
+</html>

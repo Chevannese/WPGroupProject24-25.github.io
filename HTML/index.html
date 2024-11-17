@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+  <link rel="stylesheet" href="..\CSS\style.css">
+</head>
+<body>
+  <form id="loginForm">
+    <img src="..\Assets\Logo.png" style="float:left" width="100px">
+    <legend><h2>User Login</h2></legend>
+    <div id="errorContainer" style="color: red;"></div>
+    <label for="trn">TRN:</label>
+    <input type="text" id="trn" placeholder="Enter your TRN (Format: 000-000-000)" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password (Format: Minimum 8 Characters)" required>
+    <a href="reg.html">Don't have an account? Click Here</a>
+
+    <button style="margin-top: 20px;" class="submitButton" type="button" onclick="loginUser ()">Login</button>
+    <button class="cancelButton" type="button" onclick="clearForm()">Cancel</button>
+    <center><a href="#" onclick="resetPassword()">Reset Password</a></center>
+    <!-- 
+    <button onclick="clearLocalStorage()">Clear Local Storage</button> 
+    -->
+  </form>
+</body>
+<script src="..\JS\admindata.js"></script>
+<script src="..\JS\index.js"></script>
+</html>
