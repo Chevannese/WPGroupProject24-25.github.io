@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="..\CSS\style.css">
 </head>
 <body>
-  <center><h2>Reset Password</h2></center>
+  <div class="myForm"><div></div>
   <form id="loginForm">
+    <img src="..\Assets\Logo.png" style="float:left" width="100px">
+    <legend><h2>Reset Password </h2></legend>
     <div id="errorContainer" style="color: red;"></div>
     <label for="trn">TRN:</label>
     <input type="text" id="trn" placeholder="Enter your TRN (Format: 000-000-000)" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
@@ -23,6 +25,9 @@
     <button type="button" class="submitButton" onclick="updatePassword()">Confirm</button>
     <button type="button" class="cancelButton" onclick="clearForm()">Cancel</button>
   </form>
+  <div></div>
+
+</div>
 </body>
 <script src="..\JS\admindata.js"></script>
 <script src="..\JS\index.js"></script>
