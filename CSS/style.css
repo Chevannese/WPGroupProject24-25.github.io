@@ -14,19 +14,6 @@ i
 }
 
 
-#Checkout,#Cancel,#Exit
-{
-    background-color: black;
-    color:white;
-    border-radius: 14px;
-    width: 70px;
-    height: 30px;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -ms-border-radius: 14px;
-    -o-border-radius: 14px;
-}
-
 .container
 {
     display: flex;
@@ -65,21 +52,41 @@ i
 /*Form Elements*/
 /*Appears in index, register, and checkout page*/
 
-#registrationForm,#loginForm,#shippingForm {
-    width:500px;
-    height: 900px;
-    padding: 2.0em;
-    margin-left: 25%;
-    margin-top: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+.myForm
+{
+    display:grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            margin-top: 30px;
+            column-gap: 20px;
+            row-gap: 40px;
+}
+
+  #loginForm
+  {
     background-image:linear-gradient(to right, #00EAB2,#90EE91);
+    padding:10px;
   }
-  
+
+  #registrationForm
+  {
+    background-image:linear-gradient(to right, #00EAB2,#90EE91);
+    padding:10px;
+  }
+
+  #loginForm
+  {
+    background-image:linear-gradient(to right, #00EAB2,#90EE91);
+    padding:10px;
+  }
+
   #shippingForm
   {
-    height:450px;
+    background-image:linear-gradient(to right, #00EAB2,#90EE91);
+    padding:10px;
   }
+  
+  
 
   label {
     display: block;
@@ -139,6 +146,19 @@ input:is(:hover, :focus) {
 
 /*Shopping Elements*/
 /*Appears in product and cart pages*/
+
+
+.shop-container
+{
+    display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 30px;
+            column-gap: 20px;
+            row-gap: 40px;
+            background-color: white;
+}
+
+
 .cartItems {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
@@ -366,12 +386,23 @@ input:is(:hover, :focus) {
 }
 /*Table Elements
 Appears in Checkout Page and Invoice Pages*/
+
+.myTable
+{
+    display:grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            margin-top: 30px;
+            column-gap: 20px;
+            row-gap: 40px;
+            margin-bottom: 30px;
+}
 .content-table
         {
             border-collapse:collapse;
-            margin: 25px 0;
+            
             font-size: 0.9em;
-            min-width:1000px;
+            
+            background-color: white;
         }
         .content-table thead tr
         {
@@ -507,51 +538,60 @@ Appears in Checkout Page and Invoice Pages*/
     background-color: rgb(199, 32, 32);
     border-radius: 5px;
 }
-        .left, .right {
-            flex: 1;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        canvas {
-            max-width: 100%;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .search-bar {
-            width: 80%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-.searchButton {
-         width: 100%;
-    	height: 40px;
-    	margin-bottom: 20px;
-    	padding: 10px;
-    	border: none;
-    	border-radius: 5px;
-    	background-color: red;
-    	color: #fff;
-    	cursor: pointer;
-        }
-
-
+.left, .right {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+canvas {
+    max-width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+#search-bar {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+#searchButton {
+ width: 20%;
+height: 40px;
+margin-bottom: 20px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: green;
+color: #fff;
+cursor: pointer;
+}
+.view-button {
+ width: 100%;
+height: 40px;
+margin-bottom: 20px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: green;
+color: #fff;
+cursor: pointer;
+}
 
