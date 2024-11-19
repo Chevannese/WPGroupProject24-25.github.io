@@ -48,6 +48,8 @@
         <center>
         <h3 style="margin-top: 20px;"><a href="#Summary">Shopping Cart Summary Below Form</a></h3>
         </center>
+
+        <div class="myForm"><div></div> 
         <form id="shippingForm">
             <img src="..\Assets\Logo.png" style="float:left" width="100px">
             <legend><h2>Shipping Company Form</h2></legend>
@@ -63,11 +65,17 @@
             <button class="submitButton" type="button" onclick="shippingUser()">Confirm</button>
             <button class="cancelButton" type="button" onclick="exitForm()">Cancel</button>
         </form>
+        <div></div>
+    </div> 
 
-        <div style="margin:70px;padding:10px;background-color: white;">
+
+        <div class="myTable">
+
+            <div></div>
+            <div style="background-color: white;">
+            <table class="content-table">
             <img style="float:left" src="..\Assets\Logo.png" width="50px" height="50px">
             <h1 id="Summary">Summary of Shopping Cart</h1>
-            <table class="content-table">
                 <tr>
                     <th style="text-align: left;">Qty</th>
                     <th style="text-align: left;">Description</th>
@@ -86,8 +94,8 @@
                     <td>Grand-Total</td>
                     <td>$<span id="grandTotal"></span></td>
                 </tr>
-            </table>
-             
+            </table></div>
+            <div></div>
             
         </div>
 
