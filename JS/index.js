@@ -2,7 +2,11 @@
 
 let attemptCount = 0;
 /* 
-Question 1B ii and iii
+Question 1B
+
+ii. Validate this login data by checking the currently entered trn and password against data associated with the localStorage key called, RegistrationData. 
+iii. A visitor is given three (3) attempts to enter a correct trn and password. If login is successful, redirect the user to the product catalog. Otherwise, redirect the user to an error/account locked page.
+
 */
 function loginUser() {
   const trn = document.getElementById("trn").value.trim();
