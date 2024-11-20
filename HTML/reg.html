@@ -1,3 +1,6 @@
+<!-- 
+Question 1A: Registration Page
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +11,11 @@
   <link rel="stylesheet" href="..\CSS\style.css">
 </head>
 <body>
+<!-- 
+Question 1A
+
+i.	Create a registration form where users can enter their first name, last name, date of birth, gender, phone number, email, tax registration number (trn), and password, etc. 
+-->
   <div class="myForm">
   <div></div>
   <form id="registrationForm">
@@ -44,8 +52,17 @@
 
     <label for="password">Password:</label>
     <input type="password" id="password" minlength="8" placeholder= "Enter your password (Format: Minimum 8 Characters)" required>
+<!-- 
+Question 1A
 
+vii.	Register (used to stored registration form data) 
+-->
     <button class="submitButton" type="button" onclick="registerUser()">Register</button>
+<!-- 
+Question 1A
+
+viii.	Cancel (used to clear data from the registration form)
+-->
     <button class="cancelButton" type="button" onclick="clearForm()">Cancel</button>
   </form>
   <div></div>
