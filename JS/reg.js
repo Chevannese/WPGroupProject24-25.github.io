@@ -1,9 +1,14 @@
+// Question 1A User Authentication (LocalStorage)
 // Helper function to check if TRN is unique in localStorage
 function isUniqueTRN(trn) {
   const registrations = JSON.parse(localStorage.getItem("RegistrationData")) || [];
   return !registrations.some(record => record.trn === trn);
 }
+/*
+Question 1A 
 
+iv.	Visitor must be over 18 years old to register. Calculate using JavaScript.
+*/
 // Function to calculate age based on DOB
 function calculateAge(dob) {
   if (!dob) return { valid: false, message: "Date of birth is required." };
@@ -19,7 +24,17 @@ function calculateAge(dob) {
 
   return age >= 18 ? { valid: true } : { valid: false, message: "You must be at least 18 years old to register." };
 }
+/*
+Question 1A 
 
+ii.	all fields are filled (HTML validation). 
+
+iii.	passwords should be at least 8 characters long.
+
+v.	TRN is unique; must be of length and in the format (000-000-000). **TRN is used instead of a username with login.
+
+
+*/
 // Validate user input
 function validateInput(input, type) {
   const validationRules = {
@@ -67,6 +82,13 @@ function registerUser() {
     validationErrors.push("Password must be at least 8 characters long.");
   }
   
+/*
+Question 1A 
+
+iv.	visitor must be over 18 years old to register. Calculate using JavaScript.
+
+*/
+
   // Validate DOB and age
   const ageCheck = calculateAge(formElements.dob);
   if (!ageCheck.valid) {
@@ -98,7 +120,13 @@ function registerUser() {
   // Retrieve existing registration data from localStorage
   const registrations = JSON.parse(localStorage.getItem("RegistrationData")) || [];
   registrations.push(user); // Add new user to the array
+/*
+Question 1A 
 
+vi.	store registration information (ie. first name, last name, date of birth, gender, phone number, email, tax registration number (trn), password, date of registration, cart{}, invoices[]) as a JavaScript 
+object. Each registration record must be appended to localStorage key called RegistrationData using JavaScript (as an array of objects.)
+
+*/
   // Save updated data back to localStorage
   localStorage.setItem("RegistrationData", JSON.stringify(registrations));
 
