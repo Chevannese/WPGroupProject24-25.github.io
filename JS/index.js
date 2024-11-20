@@ -1,5 +1,9 @@
-let attemptCount = 0;
+//Question 1B: Login Page
 
+let attemptCount = 0;
+/* 
+Question 1B ii and iii
+*/
 function loginUser() {
   const trn = document.getElementById("trn").value.trim();
   const password = document.getElementById("password").value;
