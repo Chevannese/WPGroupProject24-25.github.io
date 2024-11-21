@@ -1,3 +1,4 @@
+// Get current user data from localStorage
 const data = JSON.parse(localStorage.getItem('currentUser'));
 const result = data.firstName;
 document.getElementsByClassName('Login')[0].innerText = result;
@@ -8,6 +9,8 @@ const id = data.trn;
 //this allows the next purchase to not have old cart data
 var registrations = JSON.parse(localStorage.getItem('RegistrationData'));
 var products = JSON.parse(localStorage.getItem('AllProducts'));
+
+// Find the current user record in the registration data
 const user = registrations.find(record => record.trn === id);
 user.cart = [];
 products = [];
@@ -16,14 +19,16 @@ products = [];
 localStorage.setItem('RegistrationData', JSON.stringify(registrations));
 localStorage.setItem('AllProducts', JSON.stringify(products));
 
+// Get the latest invoice data from localStorage (AllInvoices key)
         const invoiceData = JSON.parse(localStorage.getItem('AllInvoices')).slice(-1)[0]; // Get the latest invoice
 
-        // Populate the page
+// Populate the page
         document.getElementById('invoiceNum').textContent = invoiceData.InvoiceNum;
         document.getElementById('invoiceDate').textContent = invoiceData.DateofInvoice;
         document.getElementById('shippingName').textContent = invoiceData.ShippingName;
         document.getElementById('shippingAddr').textContent = invoiceData.ShippingAddr;
 
+// Populate the invoice details on the page
         const itemTable = document.getElementById('itemTable');
         invoiceData.cart.forEach(item => {
             const row = document.createElement('tr');
@@ -40,4 +45,6 @@ localStorage.setItem('AllProducts', JSON.stringify(products));
         document.getElementById('gctTotal').textContent = invoiceData.gctTotal.toFixed(2);
         document.getElementById('discountTotal').textContent = invoiceData.discountTotal.toFixed(2);
         document.getElementById('grandTotal').textContent = invoiceData.grandTotal.toFixed(2);
+
+// Optional: Display a message indicating that the invoice has been sent to the user's email
         alert("Invoice has been sent to Email.");
