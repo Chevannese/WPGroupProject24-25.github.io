@@ -30,7 +30,7 @@ function calculateAge(dob) {
     return age;
   }
 
-  // Function to display user frequency as a chart
+// Task 6(a-Function to display user frequency as a chart (Gender and Age Group)
 function ShowUserFrequency() {
     const userData = JSON.parse(localStorage.getItem("RegistrationData")) || [];
     
@@ -99,7 +99,7 @@ function ShowUserFrequency() {
     }
 }
 
-// Display all invoices and allow searching by TRN
+// Task 6)b Display all invoices and allow searching by TRN
 // Function to display all invoices and filter by TRN
 const searchButton = document.getElementById("searchButton");
 if (searchButton) {
