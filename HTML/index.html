@@ -1,0 +1,78 @@
+<!-- 
+
+Group Members
+Student Name - Student ID - Contribution(s):
+
+Chevannese Ellis - 2301109 - Cart Page and Checkout Pages
+
+Daniel Lowe - 2300734 - Invoice and Additional Functions
+
+Rajay Tomlinson - 2304909 - Product Catalogue
+
+Craig Williamson - 2301516 - Login, Registration, and Reset Pages
+
+
+Question 1B - Login Page-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="icon" type="image/jpg" href="..\Assets\favicon.jpg">
+  <link rel="stylesheet" href="..\CSS\style.css">
+</head>
+
+<style>
+  *
+  {
+    margin:0px;
+    padding:0px;
+  }
+ 
+</style>
+<!-- 
+Question 1B 
+
+i.	create a login form where visitors can enter their trn and password provided at registration.
+-->
+<body>
+  <div class="myForm">
+  <div></div>
+  <form id="loginForm">
+    <img src="..\Assets\Logo.png" style="float:left" width="100px">
+    <legend><h2>User Login</h2></legend>
+    <div id="errorContainer" style="color: red;"></div>
+    <label for="trn">TRN:</label>
+    <input type="text" id="trn" placeholder="Enter your TRN (Format: 000-000-000)" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password (Format: Minimum 8 Characters)" required>
+    <a href="reg.html">Don't have an account? Click Here</a>
+<!-- 
+Question 1B
+
+iv.	Login button (validate user login information)
+-->
+    <button style="margin-top: 20px;" class="submitButton" type="button" onclick="loginUser ()">Login</button>
+<!-- 
+Question 1B 
+
+v.	Cancel button (used to clear data from the Login form)
+-->
+    <button class="cancelButton" type="button" onclick="clearForm()">Cancel</button>
+<!-- 
+Question 1B 
+
+vi.	Reset Password hyperlink (used to allow the user to change their password that is associated with the localStorage key called, RegistrationData by matching their trn.
+-->
+    <center><a href="#" onclick="resetPassword()">Reset Password</a></center>
+    <!-- 
+    <button onclick="clearLocalStorage()">Clear Local Storage</button> 
+    -->
+  </form><div></div></div>
+</body>
+<script src="..\JS\admindata.js"></script>
+<script src="..\JS\index.js"></script>
+</html>
