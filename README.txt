@@ -8,7 +8,7 @@ Daniel Lowe - 2300734 - Invoice and Additional Functions
 
 Rajay Tomlinson - 2304909 - Product Catalogue
 
-Craig Williamson - 2301516 - Login and Registration Pages
+Craig Williamson - 2301516 - Login, Registration, and Reset Pages
 
 How to Navigate the Project
 
@@ -40,8 +40,50 @@ Password: adminpass
 TRN: 003-003-003
 Password: adminpass
 
-Side Note: Cart Page needs to update
+Default Users Data
+const defaultUsers = [
+      {
+        firstName: "John",
+        lastName: "Doe",
+        dob: "1990-01-01",
+        gender: "Male",
+        phone: "873-124-2141",
+        email: "john.doe@example.com",
+        trn: "001-001-001",
+        password: "adminpass",
+        dateOfRegistration: new Date().toLocaleDateString(),
+        cart: {},
+        invoices: []
+      },
+      {
+        firstName: "Jane",
+        lastName: "Smith",
+        dob: "1985-05-12",
+        gender: "Female",
+        phone: "873-124-2142",
+        email: "jane.smith@example.com",
+        trn: "002-002-002",
+        password: "adminpass",
+        dateOfRegistration: new Date().toLocaleDateString(),
+        cart: {},
+        invoices: []
+      },
+      {
+        firstName: "Alex",
+        lastName: "Johnson",
+        dob: "1988-09-23",
+        gender: "Other",
+        phone: "873-124-2143",
+        email: "alex.johnson@example.com",
+        trn: "003-003-003",
+        password: "adminpass",
+        dateOfRegistration: new Date().toLocaleDateString(),
+        cart: {},
+        invoices: []
+      }
+    ];
 
 
-
-
+Frameworks and Tools Used:
+https://fontawesome.com/
+https://www.jsdelivr.com/  
